@@ -50,11 +50,50 @@ Since this is a personal build, the installation process might require some manu
     cd prateek-chadwm
     ```
 
-2.  **Install Dependencies:** Make sure you have the necessary dependencies for dwm. This will vary based on your distribution, but generally includes `make`, `gcc`, `xorg-dev`, and other X11 libraries. For example, on Debian/Ubuntu based systems:
+2. **Installed the Dependencies**
+#### Fedora
+1. **Update your system**:
+   ```bash
+   sudo dnf update
+   ```
 
-    ```bash
-    sudo apt-get install build-essential libx11-dev libxft-dev libxinerama-dev
-    ```
+2. **Install Development Tools and Libraries**:
+   ```bash
+   sudo dnf install @development-tools git libX11-devel libXft-devel libXinerama-devel ncurses-devel dbus-x11-devel imlib2-devel libconfig-devel
+   ```
+
+#### Debian (and Ubuntu)
+1. **Update your package index**:
+   ```bash
+   sudo apt update
+   ```
+
+2. **Install Build Essentials and Required Libraries**:
+   ```bash
+   sudo apt install build-essential git libx11-dev libxft-dev libxinerama-dev libncurses5-dev libdbus-1-dev libimlib2-dev libconfig-dev
+   ```
+
+#### Arch Linux
+1. **Update your system**:
+   ```bash
+   sudo pacman -Syu
+   ```
+
+2. **Install Base Development Packages and Required Libraries**:
+   ```bash
+   sudo pacman -S base-devel git libx11 libxft libxinerama ncurses dbus imlib2 libconfig
+   ```
+
+#### Void Linux
+1. **Update your package repository**:
+   ```bash
+   sudo xbps-install -S
+   ```
+
+2. **Install Development Tools and Libraries**:
+   ```bash
+   sudo xbps-install -y base-devel git libX11-devel libXft-devel libXinerama-devel ncurses-devel dbus-x11-devel imlib2-devel libconfig-devel
+   ```
 
 3.  **Compile:**
 
