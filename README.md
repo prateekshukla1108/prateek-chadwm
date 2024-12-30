@@ -6,6 +6,8 @@ This repository contains my personal build of ChadWM, a minimalist tiling window
 
 ChadWM is a fork of dwm (dynamic window manager) created by Siduck. It aims to provide a fast, lightweight, and highly customizable window management experience. It's known for its simplicity, efficiency and beauty.
 
+![screenshot](/assets/ss.png)
+
 ## My Modifications
 
 This build incorporates the following changes and additions:
