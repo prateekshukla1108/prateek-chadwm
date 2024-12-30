@@ -1,0 +1,12 @@
+#!/bin/dash
+
+# colors
+
+black=#1A1B29     # Darkest blue  
+green=#78B2C5    # Teal blue  
+white=#C8D4F0    # Light blue-gray  
+grey=#232635     # Dark blue-gray  
+blue=#4D8FEF     # Bright blue  
+red=#7755A8      # Purple-blue  
+darkblue=#5B74C3 # Soft indigo  
+

@@ -20,28 +20,28 @@ static const int showtab            = showtab_auto;
 static const int toptab             = 1;        /* 0 means bottom tab */
 static const int floatbar           = 1;        /* 1 means the bar will float(don't have padding),0 means the bar have padding */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int horizpadbar        = 5;
-static const int vertpadbar         = 11;
-static const int vertpadtab         = 35;
+static const int horizpadbar        = 20;
+static const int vertpadbar         = 10;
+static const int vertpadtab         = 40;
 static const int horizpadtabi       = 15;
 static const int horizpadtabo       = 15;
 static const int scalepreview       = 4;
-static const int tag_preview        = 0;        /* 1 means enable, 0 is off */
+static const int tag_preview        = 1;        /* 1 means enable, 0 is off */
 static const int colorfultag        = 1;        /* 0 means use SchemeSel for selected non vacant tag */
 static const char *wezterm_ranger[] = { "wezterm", "start", "ranger", NULL };
 static const char *wezterm_htop[] = { "wezterm", "start", "htop", NULL };
 static const char *wezterm_bashtop[] = { "wezterm", "start", "bashtop", NULL };
-static const char *wezterm_nvim[] = { "wezterm", "start", "nvim", NULL };
-static const char *wezterm_vim[] = { "wezterm", "start", "vim", NULL };
+static const char *wezterm_nvim[] = { "ghostty", "-e", "nvim", NULL };
+static const char *wezterm_vim[] = { "ghostty", "-e", "vim", NULL };
 
 static const int new_window_attach_on_end = 0; /*  1 means the new window will attach on the end; 0 means the new window will attach on the front,default is front */
-#define ICONSIZE 25   /* icon size */
-#define ICONSPACING 7 /* space between icon and title */
+#define ICONSIZE 20   /* icon size */
+#define ICONSPACING 10 /* space between icon and title */
 
-static const char *fonts[]          = {"AestheticIosevka Nerd Font:size=12"};
+static const char *fonts[]          = {"JetBrainsMono Nerd Font:size=12"};
 
 // theme
-#include "themes/gruvchad.h"
+#include "themes/dracula.h"
 
 static const char *colors[][3]      = {
     /*                     fg       bg      border */
@@ -134,7 +134,6 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
-
 /* commands */
 
 static const Key keys[] = {
@@ -161,7 +160,7 @@ static const Key keys[] = {
     { MODKEY,                           XK_Tab,       focusstack,     {.i = +1 } },
     { MODKEY,                           XK_k,       focusstack,     {.i = -1 } },
     { MODKEY,                           XK_i,       incnmaster,     {.i = +1 } },
-    { MODKEY,                           XK_d,       incnmaster,     {.i = -1 } },
+    { MODKEY,                           XK_n,       incnmaster,     {.i = -1 } },
 
     // shift view
     { MODKEY|ControlMask,                           XK_Left,    shiftview,      {.i = -1 } },
